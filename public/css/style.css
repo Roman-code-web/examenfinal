@@ -66,7 +66,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin: 0 0 10px;
 }
-
+.espacio-top{
+  margin-top: 30px!important;
+}
+.espacio-top2{
+  margin-top: 80px !important;
+  }
+.dropdown-backdrop{
+  position: unset !important;
+}
 a {
   color: #2B2D42;
   font-weight: 500;
@@ -497,22 +505,24 @@ textarea.input {
 \*----------------------------*/
 
 .header-ctn {
-  float: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   padding: 15px 0px;
 }
 
 .header-ctn>div {
   display: inline-block;
 }
-
+/* cambio
 .header-ctn>div+div {
   margin-left: 15px;
 }
-
+*/
 .header-ctn>div>a {
   display: block;
   position: relative;
-  width: 90px;
+  width: 70px;
   text-align: center;
   color: #FFF;
 }
@@ -548,11 +558,12 @@ textarea.input {
   position: absolute;
   width: 300px;
   background: #FFF;
-  padding: 15px;
+  padding: 11px;
   -webkit-box-shadow: 0px 0px 0px 2px #E4E7ED;
   box-shadow: 0px 0px 0px 2px #E4E7ED;
   z-index: 99;
-  right: 0;
+  top: 23px;
+  right: -11px;
   opacity: 0;
   visibility: hidden;
 }
@@ -2185,15 +2196,35 @@ textarea.input {
 }
 
 @media only screen and (max-width: 480px) {
-  [class*='col-xs'] {
-    width: 100%;
+.header-ctn{
+
+}
+.ocultar{
+  display: none;
+}
+.header-logo .logo img{
+  width: 90%;
+}
+.header-ctn>div>a{
+  width: 43px;
+}
+.cart-dropdown {
+  width: 233px;
+  padding: 11px;
+  top: 36px;
+  right: 7px;
+
+}
+.espacio-top{
+margin-top: 80px !important;
+}
+.espacio-top2{
+  margin-top: 100px !important;
   }
-  .store-grid {
-    float: none;
-    margin-top: 10px;
-  }
-  .store-pagination {
-    float: none;
-    margin-top: 10px;
-  }
+.margin-bottom{
+  margin-bottom: 50px !important;
+}
+#product-tab .tab-nav li{
+  padding: 0px 3px;
+}
 }
