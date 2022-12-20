@@ -1,0 +1,210 @@
+<!DOCTYPE html >
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Insertar Registros</title>
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif !important;
+        }
+    .bg-imagen{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1008%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(18%2c 109%2c 204%2c 1)'%3e%3c/rect%3e%3cpath d='M1229.22%2c418.476C1263.98%2c418.22%2c1292.372%2c394.786%2c1310.646%2c365.216C1330.124%2c333.697%2c1343.18%2c295.177%2c1325.559%2c262.583C1307.273%2c228.759%2c1267.666%2c214.001%2c1229.22%2c214.603C1191.892%2c215.188%2c1155.966%2c232.812%2c1137.97%2c265.521C1120.541%2c297.2%2c1127.161%2c335.382%2c1145.686%2c366.433C1163.701%2c396.63%2c1194.059%2c418.735%2c1229.22%2c418.476' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M801.0679169866169 287.1709891686816L898.8388877914207 178.58532540586683 790.2532240286059 80.81435460106297 692.4822532238021 189.40001836387776z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M595.8893772005506 59.033419806738294L500.4866710098101 6.150836232121719 447.6040874351935 101.55354242286224 543.006793625934 154.43612599747883z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1283.6489016549392 410.87449682005877L1244.5909853749502 274.663355438896 1108.3798439937873 313.72127171888513 1147.4377602737763 449.9324131000479z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M130.935%2c599.892C159.226%2c600.018%2c184.764%2c581.594%2c196.858%2c556.018C207.546%2c533.417%2c197.43%2c508.42%2c184.229%2c487.188C171.969%2c467.469%2c154.076%2c451.904%2c130.935%2c449.987C103.854%2c447.744%2c74.033%2c453.739%2c59.787%2c476.88C45.028%2c500.855%2c51.922%2c531.066%2c66.018%2c555.437C80.092%2c579.77%2c102.825%2c599.767%2c130.935%2c599.892' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M316.496417699934 251.71341071346683L416.8313365486709 186.55515255024108 251.33815953670825 151.37849186472994z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M264.31025534523013 449.25120024533106L185.89760333972913 373.52898240076536 111.5206025756311 529.0090693312998z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M725.7424314512325 108.32512702692799L649.3062741200243 190.29287046343933 731.2740175565357 266.72902779464744 807.7101748877438 184.7612843581361z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1113.6819005308703 300.48717948998126L1044.214216034065 449.46110964515503 1193.1881461892388 518.9287941419605 1262.655830686044 369.9548639867867z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1008'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+        background-size: cover;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .bg-fondo{
+        width: 100%;
+        background-color: #3564FF;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%233564FF' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%230362f3' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%230060e7' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23005dda' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%230059cd' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%230056c0' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%230051b3' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23004da5' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23004897' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%2300448a' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23003f7c' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%2300396e' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23003461' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23002f54' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23002947' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%2300243b' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23001e2f' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23051924' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+    }
+    .letra-tamaño{
+        font-size: 1.1rem;
+    }
+    .img-tamaño{
+        width: 70%;
+    }
+    </style>
+</head>
+<body >
+    <div class="bg-secondary bg-fondo container-fluid d-flex justify-content-center align-items-center pt-2 pb-2">
+        
+                <% if (errorEditar) { %>
+                    <div class="container d-flex justify-content-center align-items-center flex-column ">
+                        
+                        <div class="row">
+                            <div class="col-md-12 bg-light rounded-5 p-5">
+                                <div class="container-fluid text-center">
+                                    <img  class="img-tamaño" src="/img/producto2.gif" alt="" >
+                                    <p class="text-bg-danger bg-opacity-75 text-light p-2"><i class="bi bi-x-circle-fill"></i> <%= mensaje %> </p>
+                                    <a class="btn btn-primary text-light w-100" href="/">Regresar a la tabla</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <% } %>
+
+                <% if (!errorEditar) { %>
+                 
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-8 bg-light d-flex justify-content-center rounded-3">
+                <form name="frm" id="formulario" data-id="<%= producto.sku %>">
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-sm-12 ">
+                                <h2 class="fw-bold bg-imagen text-light text-center">Productos Kawais</h2>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="bg-dark text-center text-light"><h4>Datos a Ingresar</h4></div>
+                                <!--------input sku Prodcuto--------->
+                                <div class="mb-3">
+                                    <label for="sku" class="fs-5 form-label">Sku:</label>
+                                    <div class="position-relative">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text bg-primary" id="basic-addon1"><i class="text-light fs-5 bi bi-person-circle"></i></span>
+                                            <input type="text"
+                                                class="form-control" 
+                                                name="sku" 
+                                                id="sku" 
+                                                placeholder="P001"
+                                                pattern="[A-Z]+[0-9][^\s]{2,10}"
+                                                value="<%= producto.sku %>"
+                                                disabled>
+                                        </div>
+                                    </div>
+                                        <!----div errores------->
+                                    
+                                </div>
+                                <!--------input qty--------->
+                                 <div class="mb-3">
+                                    <label for="qty" class="fs-5 form-label">qty:</label>
+                                    <div class="position-relative">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text bg-primary" id="basic-addon1"><i class="text-light fs-5 bi bi-hourglass-split"></i></span>
+                                            <input type="number" 
+                                                class="form-control" 
+                                                id="qty"
+                                                name="qty"
+                                                pattern="^[0-9]{1,10}"
+                                                value="<%= producto.qty %>">
+                                        </div>
+                                    </div>
+                                    <!----div errores------->
+                                    
+                                </div>
+                                <!--------input Name--------->
+                                <div class="mb-3">
+                                    <label for="name" class="fs-5 form-label">Name:</label>
+                                    <div class="position-relative">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text bg-primary" id="basic-addon1"><i class="text-light fs-5 bi bi-cash-coin"></i></span>
+                                            <input type="text" 
+                                                class="form-control" 
+                                                id="name"
+                                                name="name"
+                                                pattern="^[a-zA-ZÀ-ÿ\s]+[^\s]{2,40}$"
+                                                placeholder="ejemplo: Galletas"
+                                                value="<%= producto.name %>">
+                                        </div>
+                                    </div>
+                                    <!----div errores------->
+                                    
+                                </div>
+                                <!--------input Price--------->
+                                <div class="mb-3">
+                                    <label for="price" class="fs-5 form-label">Price:</label>
+                                    <div class="position-relative">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text bg-primary" id="basic-addon1"><i class="text-light fs-5 bi bi-cash-coin"></i></span>
+                                            <input type="text" 
+                                                class="form-control" 
+                                                id="price"
+                                                name="price"
+                                                pattern="^[0-9]+([.][0-9]{1,2})?$"
+                                                value="<%= producto.price %>">
+                                        </div>
+                                    </div>
+                                    <!----div errores------->
+                                    
+                                </div>
+                                <!----------boton calcular---------->
+                                <div class="mb-3 d-flex justify-content-center gap-4">
+                                    <a class="btn btn-danger" href="/" >Cancelar</a>
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                </div>  
+                                <div>
+                                    <p class="text-danger" id="respuesta"></p>
+                                </div>
+                            </div>                 
+                        </div>
+                    </div>
+                </form>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <script>
+        const formulario=document.getElementById("formulario");
+        formulario.addEventListener("submit", async(e)=>{
+            e.preventDefault();
+            const sku=document.getElementById("sku").value;
+            const qty=document.getElementById("qty").value;
+            const name=document.getElementById("name").value;
+            const price=document.getElementById("price").value;
+            const prespuesta=document.getElementById("respuesta");
+            const id=formulario.dataset.id;
+            try {
+                const data= await fetch(`/${id}`,{
+                    method: 'PUT',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({qty, name,price})//convertimos en una cadena de texto JSON
+                })
+                const res=await data.json();
+                
+                if(res.estado){
+                    Swal.fire({
+                    title: 'Registro Actualizado',
+                    icon: 'success',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#3085d6',
+                    }).then((result) => {
+                        if (result.value) {
+
+                            window.location.href="/";
+
+                        }else if(result.value==undefined){
+                            window.location.href="/";
+                        }
+                        return false;
+                })
+                   
+                }else{
+                    prespuesta.innerText= res.mensaje;
+                }
+
+            } catch (error) {
+               console.log("error envio de editar "+error) 
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.15/dist/sweetalert2.all.min.js" ></script> 
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> 
+</body>
+</html>
